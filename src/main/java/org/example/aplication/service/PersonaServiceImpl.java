@@ -18,7 +18,7 @@ public class PersonaServiceImpl implements PersonaService {
     }
 
     @Override
-    public Persona findByid(int id) {
+    public Persona findByid(long id) {
         return personaRepository.findByid(id);
     }
 
@@ -31,7 +31,7 @@ public class PersonaServiceImpl implements PersonaService {
         personaRepository.update(persona);
     }
     @Override
-    public void delete(int id) {
+    public void delete(long id) {
         personaRepository.delete(id);
     }
 }

@@ -23,7 +23,7 @@ public class PersonaRepositoryImpl implements PersonaRepository {
     }
 
     @Override
-    public Persona findByid(int id) {
+    public Persona findByid(long id) {
         return findAll().stream().filter(p -> p.getId() == id).findFirst().orElse(null);
 
     }
@@ -44,7 +44,7 @@ public class PersonaRepositoryImpl implements PersonaRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(long id) {
         List<Persona> personas = findAll();
         personas = personas.stream()
                 .filter(p -> p.getId() != id)

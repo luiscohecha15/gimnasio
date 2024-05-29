@@ -1,6 +1,7 @@
 package org.example.aplication;
 
 import org.example.aplication.service.PersonaServiceImpl;
+import org.example.domain.MetodosMain;
 import org.example.domain.Persona;
 import org.example.infraestructure.repository.PersonaRepositoryImpl;
 import org.example.interfaces.PersonaRepository;
@@ -13,11 +14,12 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
 
-    public static void main(String[] args) {
+    GimnasioGUI gimnasioGUI = new GimnasioGUI();
 
+    public static void main(String[] args) {
         boolean salir = false;
         while (!salir) {
-            System.out.println("1. RegistrarPaciente");
+            System.out.println("1. Registrar");
             System.out.println("2. Actualizar datos");
             System.out.println("3. registrar cita paciente existente");
             int opcion = scanner.nextInt();
@@ -25,9 +27,12 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-
+                    MetodosMain.registrarPersona();
                     break;
                 case 2:
+                    MetodosMain.actualizarPersona();
+                    break;
+                case 3:
                     salir = true;
                     break;
 

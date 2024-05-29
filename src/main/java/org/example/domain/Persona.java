@@ -1,18 +1,19 @@
 package org.example.domain;
 
 public class Persona {
-    private int id;
+    private long id;
     private String nombre, apellido;
     private boolean in_out = false;
 
-    Persona(int id, String nombre, String apellido, boolean in_out){
+
+     public Persona(long id, String nombre, String apellido, boolean in_out){
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.in_out = in_out;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
     public String getNombre(){
@@ -25,7 +26,7 @@ public class Persona {
         return in_out;
     }
 
-    public void setId(int id){
+    public void setId(long id){
         this.id = id;
     }
     public void setNombre(String nombre) {

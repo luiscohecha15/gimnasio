@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface PersonaRepository {
     List<Persona> findAll();
-    Persona findByid(int id);
+    Persona findByid(long id);
     void save(Persona persona);
     void update(Persona persona);
-    void delete(int id);
+    void delete(long id);
     void filterIn_out(boolean in_out);
 }
