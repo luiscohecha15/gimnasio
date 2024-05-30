@@ -40,12 +40,12 @@ public class MetodosMain {
         }
         System.out.println("ingrese el nuevo nombre de la persona (dejar en blanco para no cambiar) :");
         String nombre = scanner.next();
-        if (nombre.isEmpty()) {
+        if (!nombre.isEmpty()) {
             personas.setNombre(nombre);
         }
         System.out.println("ingrese el nuevo apellido de la persona (dejar en blanco para no cambiar)");
         String apellido = scanner.next();
-        if (apellido.isEmpty()) {
+        if (!apellido.isEmpty()) {
             personas.setApellido(apellido);
         }
         try {
