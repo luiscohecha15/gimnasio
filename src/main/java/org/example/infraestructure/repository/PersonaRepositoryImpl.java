@@ -62,7 +62,7 @@ public class PersonaRepositoryImpl implements PersonaRepository {
         }
     }
 
-    private void saveAll(List<Persona> personas) {
+    public void saveAll(List<Persona> personas) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(personas);
         } catch (IOException e) {

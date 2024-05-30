@@ -1,10 +1,12 @@
 package org.example.domain;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
+    private static final long serialVersionUID = 2906642554793891381L;
     private long id;
     private String nombre, apellido;
-    private boolean in_out = false;
-
+    private boolean in_out;
 
      public Persona(long id, String nombre, String apellido, boolean in_out){
         this.id = id;
@@ -26,9 +28,8 @@ public class Persona {
         return in_out;
     }
 
-    public void setId(long id){
-        this.id = id;
-    }
+
+    public void setId(long id) {this.id = id;}
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -37,7 +38,15 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public void setIn_out(boolean in_out) {
-        this.in_out = in_out;
+    public void setIn_out(boolean in_out) {this.in_out = in_out;}
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", ingreso=" + in_out +
+                '}';
     }
 }
