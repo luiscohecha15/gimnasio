@@ -23,14 +23,14 @@ public class MetodosMain {
         Persona persona = new Persona(id,nombre,apellido,false);
         try {
             personaService.save(persona);
-            System.out.println("Paciente registrado exitosamente. ");
+            System.out.println("Usuario registrado exitosamente. ");
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
 
     public static void actualizarPersona() {
-        System.out.println("ingrese el id  del paciente a actualizar:");
+        System.out.println("ingrese el id  del usuario a actualizar:");
         long cc = scanner.nextLong();
         scanner.nextLine();
         Persona personas = personaService.findByid(cc);
@@ -50,7 +50,7 @@ public class MetodosMain {
         }
         try {
         personaService.update(personas);
-        System.out.println("paciente actualizado exitosamente.");
+        System.out.println("usuario actualizado exitosamente.");
         }catch (IllegalArgumentException e){
             System.out.println("Error"+ e.getMessage());
         }
